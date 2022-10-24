@@ -1,0 +1,45 @@
+sequencias
+123
+456
+789
+
+147
+258
+369
+
+159
+357
+--------------------
+
+INICIO
+
+var rodada = 1
+var jogador1
+var jogador2
+var sequenciaX
+var sequenciaBola
+
+var array sequencia [123, 456, 789, 147, 258, 369, 159, 357]
+
+se rodada =1 marca nome jogador1 senao marca nome jogador2
+
+evento click quadro 1 
+  se rodada =1 preenche quadrado com x senao preenche com bolinha
+  sequenciaAtual = sequenciaAtual + '1'
+  chama funcao checa sequencia
+  rodada = 2
+
+
+
+
+funcao checha sequencia
+  let seqIndex = 0
+  sequencia.foreach {
+    se sequencia[seqIndex] = sequenciaX || sequencia[seqIndex] = sequenciaBola {
+    vencedor = rodada
+    chama telaFinal
+    }
+    seqIndex++
+  }
+
+

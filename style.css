@@ -1,0 +1,20 @@
+#grade{
+	border: 1px solid orange;
+	width: 306px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+.caixa{
+	width: 100px;
+	height: 100px;
+	border: 1px solid green;
+}
+
+#telaInicio{
+    background-color: lightgray;
+    
+}
+
+#telaFim{
+	background-color: darkgray;
+}
