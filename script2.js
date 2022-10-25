@@ -15,7 +15,6 @@ const player1 = document.getElementById('player1')
 const player2 = document.getElementById('player2')
 const nomePlayer1 = document.getElementById('nomePlayer1')
 const nomePlayer2 = document.getElementById('nomePlayer2')
-var nomeVencedor = document.getElementById('nomeVencedor')
 
 var sequencias = [linha1 = '', linha2 = '', linha3 = '',
                   coluna1 = '', coluna2 = '', coluna3 = '',
@@ -46,165 +45,165 @@ caixa1.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa1.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[0] = sequencias[0] + 'o'
-		sequencias[3] = sequencias[3] + 'o'
-		sequencias[6] = sequencias[6] + 'o'
+		linha1 = linha1 + 'o'
+		coluna1 = coluna1 + 'o'
+		diagonal1 = diagonal1 + 'o'
 	  } 
 	  else if(jogadorDaVez == 2) {
 		caixa1.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[0] = sequencias[0] + 'x'
-		sequencias[3] = sequencias[3] + 'x'
-		sequencias[6] = sequencias[6] + 'x'
+		linha1 = linha1 + 'x'
+		coluna1 = coluna1 + 'x'
+		diagonal1 = diagonal1 + 'x'
 	  } 
 	  testaSequencia()
-	  console.log(sequencias[0] + ' ' + sequencias[3] + ' ' + sequencias[6] ) 
+	  console.log(linha1 + ' ' + coluna1 + ' ' + diagonal1 ) 
 })
 
 caixa2.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa2.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-    sequencias[0] = sequencias[0] + 'o'
-		sequencias[4] = sequencias[4] + 'o'
+    linha1 = linha1 + 'o'
+		coluna2 = coluna2 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa2.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[0] = sequencias[0] + 'x'
-		sequencias[4] = sequencias[4] + 'x'
+		linha1 = linha1 + 'x'
+		coluna2 = coluna2 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[0] + ' ' + sequencias[4])
+	console.log(linha1 + ' ' + coluna2)
 })
 
 caixa3.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa3.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[0] = sequencias[0] + 'o'
-		sequencias[5] = sequencias[5] + 'o'
-		sequencias[7] = sequencias[7] + 'o'
+		linha1 = linha1 + 'o'
+		coluna3 = coluna3 + 'o'
+		diagonal2 = diagonal2 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa3.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[0] = sequencias[0] + 'x'
-		sequencias[5] = sequencias[5] + 'x'
-		sequencias[7] = sequencias[7] + 'x'
+		linha1 = linha1 + 'x'
+		coluna3 = coluna3 + 'x'
+		diagonal2 = diagonal2 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[0] + ' ' + sequencias[5] + ' ' + sequencias[7] )
+	console.log(linha1 + ' ' + coluna3 + ' ' + diagonal2 )
 })
 
 caixa4.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa4.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[1] = sequencias[1] + 'o'
-		sequencias[3] = sequencias[3] + 'o'
+		linha2 = linha2 + 'o'
+		coluna1 = coluna1 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa4.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[1] = sequencias[1] + 'x'
-		sequencias[3] = sequencias[3] + 'x'
+		linha2 = linha2 + 'x'
+		coluna1 = coluna1 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[1] + ' ' + sequencias[3] )
+	console.log(linha2 + ' ' + coluna1 )
 })
 
 caixa5.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa5.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[1] = sequencias[1] + 'o'
-		sequencias[4] = sequencias[4] + 'o'
-		sequencias[6] = sequencias[6] + 'o'
-		sequencias[7] = sequencias[7] + 'o'
+		linha2 = linha2 + 'o'
+		coluna2 = coluna2 + 'o'
+		diagonal1 = diagonal1 + 'o'
+		diagonal2 = diagonal2 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa5.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[1] = sequencias[1] + 'x'
-		sequencias[4] = sequencias[4] + 'x'
-		sequencias[6] = sequencias[6] + 'x'
-		sequencias[7] = sequencias[7] + 'x'
+		linha2 = linha2 + 'x'
+		coluna2 = coluna2 + 'x'
+		diagonal1 = diagonal1 + 'x'
+		diagonal2 = diagonal2 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[1] + ' ' + sequencias[4] + ' ' + sequencias[6] + ' ' + sequencias[7])
+	console.log(linha2 + ' ' + coluna2 + ' ' + diagonal1 + ' ' + diagonal2)
 })
 
 caixa6.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa6.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[1] = sequencias[1] + 'o'
-		sequencias[5] = sequencias[5] + 'o'
+		linha2 = linha2 + 'o'
+		coluna3 = coluna3 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa6.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[1] = sequencias[1] + 'x'
-		sequencias[5] = sequencias[5] + 'x'
+		linha2 = linha2 + 'x'
+		coluna3 = coluna3 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[1] + ' ' + sequencias[5])
+	console.log(linha2 + ' ' + coluna3)
 })
 
 caixa7.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa7.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[2] = sequencias[2] + 'o'
-		sequencias[3] = sequencias[3] + 'o'
-		sequencias[7] = sequencias[7] + 'o'
+		linha3 = linha3 + 'o'
+		coluna1 = coluna1 + 'o'
+		diagonal2 = diagonal2 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa7.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[2] = sequencias[2] + 'x'
-		sequencias[3] = sequencias[3] + 'x'
-		sequencias[7] = sequencias[7] + 'x'
+		linha3 = linha3 + 'x'
+		coluna1 = coluna1 + 'x'
+		diagonal2 = diagonal2 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[2] + ' ' + sequencias[3] + ' ' + sequencias[7])
+	console.log(linha3 + ' ' + coluna1 + ' ' + diagonal2)
 })
 
 caixa8.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa8.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[2] = sequencias[2] + 'o'
-		sequencias[4] = sequencias[4] + 'o'
+		linha3 = linha3 + 'o'
+		coluna2 = coluna2 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa8.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[2] = sequencias[2] + 'x'
-		sequencias[4] = sequencias[4] + 'x'
+		linha3 = linha3 + 'x'
+		coluna2 = coluna2 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[2] + ' ' + sequencias[4])
+	console.log(linha3 + ' ' + coluna2)
 })
 
 caixa9.addEventListener('click', () => {
 	if(jogadorDaVez == 1) {
 		caixa9.style.backgroundImage = 'url(x.png)'
 		jogadorDaVez = 2
-		sequencias[2] = sequencias[2] + 'o'
-		sequencias[5] = sequencias[5] + 'o'
-		sequencias[6] = sequencias[6] + 'o'
+		linha3 = linha3 + 'o'
+		coluna3 = coluna3 + 'o'
+		diagonal1 = diagonal1 + 'o'
 	} 
 	else if(jogadorDaVez == 2) {
 		caixa9.style.backgroundImage = 'url(bola.png)'
 		jogadorDaVez = 1
-		sequencias[2] = sequencias[2] + 'x'
-		sequencias[5] = sequencias[5] + 'x'
-		sequencias[6] = sequencias[6] + 'x'
+		linha3 = linha3 + 'x'
+		coluna3 = coluna3 + 'x'
+		diagonal1 = diagonal1 + 'x'
 	}
 	testaSequencia()
-	console.log(sequencias[2] + ' ' + sequencias[5] + ' ' + sequencias[6] )
+	console.log(linha3 + ' ' + coluna3 + ' ' + diagonal1 )
 })
 
 /*
@@ -237,10 +236,10 @@ function testaSequencia() {
 
 function final() {
 	if(jogadorDaVez == 1) {
-		nomeVencedor.innerHTML = nomePlayer1.value
+		vencedor.innerHTML = nomePlayer1
 		console.log('1 ganhou')
-	}else{
-		nomeVencedor.innerHTML = nomePlayer2.value
+	} else {
+		vencedor.innerHTML = nomePlayer2
 		console.log('2 ganhou')
 	}
 }
