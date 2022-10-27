@@ -3,13 +3,32 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: arial, sans-serif;
+
 }
 
 #container-jogo{
-	margin-top: 15px;
+	padding-top: 70px;
+	width: 100%;
+	height: 100vh;
+    background-image: radial-gradient(#A7E4EA, darkblue);
+	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#container-players{
+	margin-top: 20px;
+	width: 310px;
+	height: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	border: 2px solid orange;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 1.2rem;
 }
 
 #grade{
@@ -30,12 +49,33 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	width: 350px;
-	height: 360px;
-    background-color: lightgray;
+	height: 410px;
+    background-image: radial-gradient(#E9B219, #E96319);
     position: absolute;
     z-index: 1;
-    top: 15px;   
+    top: 60px;   
     border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+}
+
+#telaInicio input{
+	width: 50%;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid #9F4513;
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+#btnComecar{
+	font-weight: bold;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px darkblue;
+    background-color: #3483F0;
+    color: #fff;
 }
 
 #telaFim{
@@ -44,10 +84,12 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	width: 350px;
-	height: 360px;
+	height: 410px;
 	position: absolute;
-	top: 15px;
-	background-color: darkgray;
+	top: 60px;
+	border-radius: 10px;
+	background-image: radial-gradient(#A2E53E, #599F13);
+	box-shadow: 3px 3px 3px;
 }
 
 #caixa1, #caixa2, #caixa3{

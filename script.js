@@ -1,14 +1,3 @@
-/*const caixa1 = document.getElementById('caixa1')
-const caixa2 = document.getElementById('caixa2')
-const caixa3 = document.getElementById('caixa3')
-const caixa4 = document.getElementById('caixa4')
-const caixa5 = document.getElementById('caixa5')
-const caixa6 = document.getElementById('caixa6')
-const caixa7 = document.getElementById('caixa7')
-const caixa8 = document.getElementById('caixa8')
-const caixa9 = document.getElementById('caixa9')
-*/
-
 var caixas = [
   caixa1 = document.getElementById('caixa1'),
   caixa2 = document.getElementById('caixa2'),
@@ -34,14 +23,8 @@ var empate = 0
 var sequencias = [linha1 = '', linha2 = '', linha3 = '',
                   coluna1 = '', coluna2 = '', coluna3 = '',
                   diagonal1 = '', diagonal2 = '']
-
 var jogadorDaVez = 1 
 var vencedor
-
-/*var caixas = [
-    caixa1, caixa2, caixa3, caixa4, caixa5, caixa6,
-    caixa7, caixa8, caixa9
-  ]*/
 
 btnComecar.addEventListener('click', () => {
   telaInicio.style.display = 'none'
@@ -224,7 +207,7 @@ function testaSequencia() {
      sequencias[6] == 'xxx' || sequencias[6] == 'ooo' ||
      sequencias[7] == 'xxx' || sequencias[7] == 'ooo') {
     final()
-    } else {checaEmpate()}
+  } else {checaEmpate()}
 }
 
 function final() {
@@ -258,10 +241,8 @@ btnReinicia.addEventListener('click', () => {
 
 function limpaGrade(item, index) {
 	caixas[index].style.backgroundImage = 'url(blank.png)'
-	
 }
 
 function limpaSequencias(item, index) {
 	sequencias[index] = ''
-	console.log(sequencias)
 }
