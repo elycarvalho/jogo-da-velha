@@ -67,6 +67,13 @@ body {
 	font-size: 1.1rem;
 }
 
+#telaInicio h2{
+    font-size: 2rem;
+    color: #009A36;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px #000;
+}
+
 #btnComecar{
 	font-weight: bold;
     width: 50%;
@@ -108,3 +115,18 @@ body {
 	border-right: none;
 }
 
+#nomeVencedor{
+	font-weight: bold;
+    font-size: 1.7rem;
+}
+
+#btnReinicia{
+	width: 50%;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background-color: #E9B219;
+	box-shadow: 2px 2px 2px darkgreen;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

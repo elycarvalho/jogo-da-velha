@@ -28,8 +28,8 @@ var vencedor
 
 btnComecar.addEventListener('click', () => {
   telaInicio.style.display = 'none'
-  player1.innerHTML += nomePlayer1.value
-  player2.innerHTML += nomePlayer2.value
+  player1.innerHTML = nomePlayer1.value
+  player2.innerHTML = nomePlayer2.value
 })
 
 caixa1.addEventListener('click', () => {
@@ -211,12 +211,12 @@ function testaSequencia() {
 }
 
 function final() {
-	if(jogadorDaVez == 1) {
-		nomeVencedor.innerHTML = nomePlayer1.value + ' venceu!'
+	if(jogadorDaVez === 2) {
+		nomeVencedor.innerHTML = '" X " ' + nomePlayer1.value + ' venceu!'
 		telaFim.style.display = 'flex'
 		console.log('1 ganhou')
 	}else{
-		nomeVencedor.innerHTML = nomePlayer2.value + ' venceu!'
+		nomeVencedor.innerHTML = '" O " ' + nomePlayer2.value + ' venceu!'
 		telaFim.style.display = 'flex'
 		console.log('2 ganhou')
 	}
@@ -232,8 +232,8 @@ function checaEmpate() {
 btnReinicia.addEventListener('click', () => {
 	telaFim.style.display = 'none'
 	empate = 0
-	player1.innerHTML = 'X :'
-  player2.innerHTML = 'O :'
+	player1.innerHTML = ''
+  player2.innerHTML = ''
   caixas.forEach(limpaGrade)
   sequencias.forEach(limpaSequencias)
   telaInicio.style.display = 'flex'
